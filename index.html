@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="team1">
+        <p id="t1Name">Takım A</p>
+        <p id="t1Score">0</p>
+        <button class="btn" id="t1NameEdit" onclick="t1NameChange()">Takım Adı Değiştir</button>
+        <button class="btn" onclick="t1Increase()">+</button>
+        <button class="btn" onclick="t1Decrease()">-</button>
+        <button class="btn" id="t1EditBtn" onclick="t1EditScore()">Edit</button>
+      </div>
+      <div id="team2">
+        <p id="t2Name">Takım B</p>
+        <p id="t2Score">0</p>
+        <button class="btn" id="t2NameEdit" onclick="t2NameChange()">Takım Adı Değiştir</button>
+        <button class="btn" onclick="t2Increase()">+</button>
+        <button class="btn" onclick="t2Decrease()">-</button>
+        <button class="btn" id="t2EditBtn" onclick="t2EditScore()">Edit</button>
+
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
