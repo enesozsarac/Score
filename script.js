@@ -9,7 +9,7 @@ let t2Name = document.getElementById("t2Name");
 
 let score = 0;
 function t1Increase() {
-  score++;
+  score++;  
   t1Score.innerHTML = score;
 }
 
@@ -55,6 +55,7 @@ function t1EditScore() {
       alert("Sayi gir");
     } else {
       t1Score.innerHTML = editInput.value;
+      score = editInput.value;
       team1.removeChild(okBtn);
       team1.removeChild(editInput);
       team1.appendChild(t1EditBtn);
@@ -79,6 +80,7 @@ function t2EditScore() {
       alert("Sayi gir");
     } else {
       t2Score.innerHTML = editInput.value;
+      score2 = editInput.value;
       team2.removeChild(okBtn);
       team2.removeChild(editInput);
       team2.appendChild(t2EditBtn);
