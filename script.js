@@ -52,7 +52,7 @@ function t1EditScore() {
   team1.appendChild(okBtn);
   okBtn.addEventListener("click", function () {
     if (editInput.value == 0) {
-      alert("Sayi gir");
+      alert("Score yazmalısın");
     } else {
       t1Score.innerHTML = editInput.value;
       score = editInput.value;
@@ -77,7 +77,7 @@ function t2EditScore() {
 
   okBtn.addEventListener("click", function () {
     if (editInput.value == 0) {
-      alert("Sayi gir");
+      alert("Score yazmalısın");
     } else {
       t2Score.innerHTML = editInput.value;
       score2 = editInput.value;
@@ -100,7 +100,7 @@ function t1NameChange() {
 
   t1NameEditApply.addEventListener("click", function () {
     if (editNameInput.value == "") {
-      alert("Isim Yaz");
+      alert("Takim adı yazmalısın");
     } else {
       t1Name.innerHTML = editNameInput.value;
       team1.removeChild(editNameInput);
@@ -121,7 +121,7 @@ function t2NameChange() {
 
   t2NameEditApply.addEventListener("click", function () {
     if (editNameInput.value == "") {
-      alert("Isim Yaz");
+      alert("Takim adı yazmalısın");
     } else {
       t2Name.innerHTML = editNameInput.value;
       team2.removeChild(editNameInput);
