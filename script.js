@@ -1,15 +1,17 @@
-let t1Score = document.getElementById("t1Score");
-let t2Score = document.getElementById("t2Score");
-let team1 = document.getElementById("team1");
-let team2 = document.getElementById("team2");
-let t1Name = document.getElementById("t1Name");
-let t2Name = document.getElementById("t2Name");
+const t1Score = document.getElementById("t1Score");
+const t2Score = document.getElementById("t2Score");
+const team1 = document.getElementById("team1");
+const team2 = document.getElementById("team2");
+const t1Name = document.getElementById("t1Name");
+const t2Name = document.getElementById("t2Name");
+const innerContent1 = document.getElementById("innerContent1");
+const innerContent2 = document.getElementById("innerContent2");
 
 //Team 1 score + & -
 
 let score = 0;
 function t1Increase() {
-  score++;  
+  score++;
   t1Score.innerHTML = score;
 }
 
@@ -48,17 +50,18 @@ function t1EditScore() {
   okBtn.innerHTML = "OK";
   editInput.setAttribute("type", "number");
   editInput.setAttribute("min", "0");
-  team1.replaceChild(editInput, t1EditBtn);
-  team1.appendChild(okBtn);
+  editInput.value = score;
+  innerContent1.replaceChild(editInput, t1EditBtn);
+  innerContent1.appendChild(okBtn);
   okBtn.addEventListener("click", function () {
-    if (editInput.value == 0) {
+    if (editInput.value == "") {
       alert("Score yazmalısın");
     } else {
       t1Score.innerHTML = editInput.value;
       score = editInput.value;
-      team1.removeChild(okBtn);
-      team1.removeChild(editInput);
-      team1.appendChild(t1EditBtn);
+      innerContent1.removeChild(okBtn);
+      innerContent1.removeChild(editInput);
+      innerContent1.appendChild(t1EditBtn);
     }
   });
 }
@@ -72,18 +75,19 @@ function t2EditScore() {
   okBtn.innerHTML = "OK";
   editInput.setAttribute("type", "number");
   editInput.setAttribute("min", "0");
-  team2.replaceChild(editInput, t2EditBtn);
-  team2.appendChild(okBtn);
+  editInput.value = score2;
+  innerContent2.replaceChild(editInput, t2EditBtn);
+  innerContent2.appendChild(okBtn);
 
   okBtn.addEventListener("click", function () {
-    if (editInput.value == 0) {
+    if (editInput.value == "") {
       alert("Score yazmalısın");
     } else {
       t2Score.innerHTML = editInput.value;
       score2 = editInput.value;
-      team2.removeChild(okBtn);
-      team2.removeChild(editInput);
-      team2.appendChild(t2EditBtn);
+      innerContent2.removeChild(okBtn);
+      innerContent2.removeChild(editInput);
+      innerContent2.appendChild(t2EditBtn);
     }
   });
 }
@@ -128,4 +132,17 @@ function t2NameChange() {
       team2.replaceChild(t2NameEdit, t2NameEditApply);
     }
   });
+}
+
+//Team 1 Reset Score
+
+function t1ResetScore() {
+  t1Score.innerText = 0;
+  score = 0;
+}
+
+// Team 2 Reset Score
+function t2ResetScore() {
+  t2Score.innerText = 0;
+  score2 = 0;
 }
